@@ -1,0 +1,126 @@
+.page {
+	padding: 16px;
+}
+
+.home-page {
+	header {
+		h1 {
+			font-size: 32px;
+			padding: 80px 0 40px;
+		}
+	}
+	
+	.search-form {
+		padding: 16px;
+		background: $light;
+		position: sticky;
+		margin-bottom: 8px;
+		left: 0;
+		top: 0;
+		z-index: 1;
+
+		.search-box {
+			display: flex;
+			align-items: center;
+			background: $grey5;
+			border-radius: 14px;
+			padding-left: 16px;
+
+			.input {
+				height: auto;
+				padding: 16px;
+				border: 0;
+				background: transparent;
+
+				&::placeholder {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	
+	.list {
+		a {
+			display: block;
+		}
+		
+		li:not(:last-child) {
+			margin-bottom: 3px;
+		}
+		
+		figure {
+			position: relative;
+			padding-top: calc(9 / 16 * 100%);
+			background: $grey5 no-repeat center;
+			background-size: cover;
+		}
+		
+		figcaption {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .25);
+			padding: 16px;
+			display: flex;
+			flex-direction: column;
+			
+			h3 {
+				font-size: 28px;
+				color: $light;
+			}
+		}
+	}
+}
+
+.detail-page {
+	header {
+		figure {
+			position: relative;
+			padding-top: 100%;
+			background: $grey5 no-repeat center;
+			background-size: cover;
+		}
+		
+		figcaption {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, .40);
+			padding: 16px;
+			display: flex;
+			flex-direction: column;
+			
+			.name {
+				padding: 14px;
+				border-radius: 8px;
+				background: $light;
+				
+				h3 {
+					font-size: 16px;
+				}
+				
+				span {
+					color: $grey1;
+				}
+			}
+		}
+	}
+	
+	.info {
+		background: $grey5;
+		padding: 12px;
+		border-radius: 8px;
+		
+		.round-icon {
+			background: #ACD7FF;
+		}
+		
+		small {
+			color: $grey1;
+		}
+	}
+}

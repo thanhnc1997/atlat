@@ -1,8 +1,3 @@
-import {
-	create_element,
-	common
-} from './helper.js';
-
 const pathname = location.pathname;
 
 async function draw(blocks) {
@@ -12,7 +7,6 @@ async function draw(blocks) {
 		const _block = await block;
 		if(_block )app.appendChild(_block);
 	}
-	await common();
 }
 
 const render = {
@@ -21,9 +15,9 @@ const render = {
 			(await import('./pages/home_page.js')).render(),
 		]);
 	},
-	async detail() {
+	async detail(params) {
 		await draw([
-			(await import('./pages/detail_page.js')).render(),
+			(await import('./pages/detail_page.js')).render(params),
 		]);
 	}
 }
@@ -31,22 +25,22 @@ const render = {
 const app = {
 	page: [
 		{
-			url: '/',
+			url: '/detail/id=',
 			async render() {
-				await render.home();
-			}
-		},
-		{
-			url: '/detail',
-			async render() {
-				await render.detail();
+				const id = pathname.split('/')[2].replace('id=', '');
+				await render.detail({id: id});
 			}
 		}
 	],
 	async init() {
-		this.page.map(item => {
-			if (pathname.includes(item.url)) item.render();
-		});
+		if (pathname == '/' || pathname == '') {
+			await render.home();
+		}
+		else {
+			this.page.map(item => {
+				if (pathname.includes(item.url) && pathname != '/') item.render();
+			});
+		}
 	}
 }
 
