@@ -2,9 +2,9 @@ import {
 	create_element
 } from '../helper.js';
 
-import {
-	data
-} from '../data.js';
+const data;
+
+if 
 
 export async function render(params) {
 	const {id} = params;

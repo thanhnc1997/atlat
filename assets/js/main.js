@@ -15,6 +15,11 @@ const render = {
 			(await import('./pages/home_page.js')).render(),
 		]);
 	},
+	async category(params) {
+		await draw([
+			(await import('./pages/category_page.js')).render(params),
+		]);
+	},
 	async detail(params) {
 		await draw([
 			(await import('./pages/detail_page.js')).render(params),
@@ -26,6 +31,13 @@ const app = {
 	page: [
 		{
 			url: '/detail/id=',
+			async render() {
+				const id = pathname.split('/')[2].replace('id=', '');
+				await render.detail({id: id});
+			}
+		},
+		{
+			url: '/category/id=',
 			async render() {
 				const id = pathname.split('/')[2].replace('id=', '');
 				await render.detail({id: id});

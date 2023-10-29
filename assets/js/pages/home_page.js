@@ -2,88 +2,76 @@ import {
 	create_element
 } from '../helper.js';
 
-import {
-	data
-} from '../data.js';
+let data = await import('../data.js');
+let flag = '';
+let lang_default = 'VN';
 
-let typing_timer = null;
+if (localStorage.getItem('lang')) lang_default = localStorage.getItem('lang');
 
-export async function render() {
+if (lang_default == 'VN') {
+	data = data.VI;
+	flag = 'background-image: url(/assets/images/VN.png)';
+}
+
+if (lang_default == 'EN') {
+	data = data.EN;
+	flag = 'background-image: url(/assets/images/UK.png)';
+}
+
+console.log(data);
+
+export async function render(params) {
 	const template = create_element('section');
 	template.classList.add('home-page');
 	
 	async function page_header() {
-		const div = create_element('header');
-		div.innerHTML = `
-		<h1 class="text-center">Đồng bằng <br> sông Hồng</h1>
-		`;
+		let lang_switch = false;
 		
-		return div;
-	}
-	
-	async function done_typing(params) {
-		const filter_data = data.filter(item => {
-			return item.name.toLocaleLowerCase().includes(params.value);
-		});
-		
-		await render_list(filter_data);
-	}
-	
-	async function search_form() {
-		const div = create_element('div');
-		div.classList.add('search-form');
+		let div = create_element('header'); 
 		div.innerHTML = `
-		<div class="search-box">
-			<img class="mr-8" src="/assets/images/icons/search.svg">
-			<input class="input" name="search" placeholder="Tìm kiếm tỉnh, thành phố">
+		<div class="lang-switcher ml-auto">
+			<span class="slider" style="${flag}"></span>
+			<span class="lang">
+				<span id="EN" style="display: ${lang_switch == true ? 'block' : 'none'}">EN</span>
+				<span class="ml-auto" id="VN" style="display: ${lang_switch == false ? 'block' : 'none'}">VN</span>
+			</span>
 		</div>
 		`;
 		
-		div.querySelector('input').addEventListener('input', e => {
-			clearTimeout(typing_timer);
-			typing_timer = setTimeout(async () => {
-				await done_typing({value: e.target.value});
-			}, 250);
+		div.querySelector('.lang-switcher').addEventListener('click', (e) => {
+			e.currentTarget.classList.toggle('trigger');
+			lang_switch = !lang_switch;
+			
+			if (lang_switch == true) {
+				e.currentTarget.querySelector('#EN').style.display = 'block';
+				e.currentTarget.querySelector('#VN').style.display = 'none';
+				e.currentTarget.querySelector('.slider').style.cssText = 'background-image: url(/assets/images/UK.png)';
+				localStorage.setItem('lang', 'EN');
+			}
+			
+			if (lang_switch == false) {
+				e.currentTarget.querySelector('#EN').style.display = 'none';
+				e.currentTarget.querySelector('#VN').style.display = 'block';
+				e.currentTarget.querySelector('.slider').style.cssText = 'background-image: url(/assets/images/VN.png)';
+				localStorage.setItem('lang', 'VN');
+			}
 		});
 		
 		return div;
 	}
 	
-	async function list() {
-		const ul = create_element('ul');
-		ul.classList.add('list');
+	async function page_body() {
+		let div = create_element('div');
+		div.classList.add('page');
+		div.innerHTML = `
+		<h1><b>Đất nước Việt Nam</b></h1>
+		`;
 		
-		return ul;
-	}
-	
-	async function render_list(params) {
-		template.querySelector('.list').innerHTML = '';
-		
-		params.map(item => {
-			const li = create_element('li');
-			li.innerHTML = `
-			<a href="/detail/id=${item.id}">
-				<figure style="background-image: url(${item.thumbnail})">
-					<figcaption>
-						<div class="mt-auto d-flex align-items-center">
-							<h3 class="mr-auto">${item.name}</h3>
-							<span class="round-icon">
-								<img src="/assets/images/icons/arrow_right.svg">
-							</span>
-						</div>
-					</figcaption>
-				</figure>
-			</a>
-			`;
-			
-			template.querySelector('.list').appendChild(li);
-		});
+		return div;
 	}
 	
 	template.appendChild(await page_header());
-	template.appendChild(await search_form());
-	template.appendChild(await list());
-	await render_list(data);
+	template.appendChild(await page_body());
 	
 	return template;
 }
