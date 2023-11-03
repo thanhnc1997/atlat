@@ -2,13 +2,23 @@ import {
 	create_element
 } from '../helper.js';
 
-const data;
+let data = await import('../data.js');
 
-if 
+let lang_default = 'VN';
+
+if (localStorage.getItem('lang')) lang_default = localStorage.getItem('lang');
+
+if (lang_default == 'VN') {
+	data = data.VI;
+}
+
+if (lang_default == 'EN') {
+	data = data.EN;
+}
 
 export async function render(params) {
-	const {id} = params;
-	const detail = data.filter(item => item.id == id)[0];
+	data = data.province.filter(province => province.id == params.id)[0];
+	let {name, desc, sub, thumbnail, cuisine, administrative} = data;
 	
 	const template = create_element('section');
 	template.classList.add('detail-page');
@@ -16,7 +26,7 @@ export async function render(params) {
 	async function page_header() {
 		const div = create_element('header');
 		div.innerHTML = `
-		<figure style="background-image: url(${detail.thumbnail})">
+		<figure style="background-image: url(${thumbnail})">
 			<figcaption>
 				<div class="d-flex align-items-center justify-content-between mb-auto" style="padding: 20px 0 0;">
 					<span onclick="history.back()" class="round-icon">
@@ -29,10 +39,10 @@ export async function render(params) {
 				</div>
 
 				<div class="name">
-					<h3 class="mb-6">${detail.name}</h3>
+					<h3 class="mb-6">${name}</h3>
 					<p class="d-flex align-items-center">
 						<img class="mr-6" src="/assets/images/icons/map_pin.svg">
-						<span>${detail.sub}</span>
+						<span>${sub}</span>
 					</p>
 				</div>
 			</figcaption>
@@ -53,7 +63,7 @@ export async function render(params) {
 				</span>
 				<p>
 					<small class="d-block mb-6">Dân số</small>
-					<b style="font-size: 16px;">${detail.administrative.population}</b>
+					<b style="font-size: 16px;">${administrative.population}</b>
 				</p>
 			</div>
 			<div class="info d-flex align-items-center">
@@ -62,7 +72,7 @@ export async function render(params) {
 				</span>
 				<p>
 					<small class="d-block mb-6">Diện tích</small>
-					<b style="font-size: 16px;">${detail.administrative.area}</b>
+					<b style="font-size: 16px;">${administrative.area}</b>
 				</p>
 			</div>
 			<div class="info d-flex align-items-center">
@@ -71,7 +81,7 @@ export async function render(params) {
 				</span>
 				<p>
 					<small class="d-block mb-6">Quận</small>
-					<b style="font-size: 16px;">${detail.administrative.disticts}</b>
+					<b style="font-size: 16px;">${administrative.disticts}</b>
 				</p>
 			</div>
 			<div class="info d-flex align-items-center">
@@ -80,19 +90,19 @@ export async function render(params) {
 				</span>
 				<p>
 					<small class="d-block mb-6">Huyện</small>
-					<b style="font-size: 16px;">${detail.administrative.towns}</b>
+					<b style="font-size: 16px;">${administrative.towns}</b>
 				</p>
 			</div>
 		</div>
 		
 		<h4 class="mb-12">Giới thiệu</h4>
-		<p class="mb-18 text-justify">${detail.desc || ''}</p>
+		<p class="mb-18 text-justify">${desc || ''}</p>
 		
 		${
-		detail.cuisine
+		cuisine
 		? `
 		<h4 class="mb-12">Ẩm thực</h4>
-		<p class="mb-18 text-justify">${detail.cuisine.desc}</p>
+		<p class="mb-18 text-justify">${cuisine.desc}</p>
 		<div class="overflow-hidden">
 			<div class="gallery-list" id="cuisine">
 				<div class="track">
@@ -110,8 +120,8 @@ export async function render(params) {
 	}
 	
 	async function cuisine_list() {
-		if (!detail.cuisine) return false;
-		detail.cuisine.list.map(cuisine => {
+		if (!cuisine) return false;
+		cuisine.list.map(cuisine => {
 			const div = create_element('div');
 			div.classList.add('item');
 			div.innerHTML = `

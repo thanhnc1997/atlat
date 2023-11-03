@@ -2,19 +2,27 @@ export const VI = {
 	location: [
 		{
 			id: 1,
-			name: 'Đồng bằng sông Hồng',
+			name: 'Đồng bằng<br> sông Hồng',
 			provinces: [
 				{
-					name: 'Hà Nội'
+					id: 29,
+					name: 'Hà Nội',
+					thumbnail: '/assets/images/ha_noi/thumbnail.jpg',
 				},
 				{
-					name: 'Hải Phòng'
+					id: 16,
+					name: 'Hải Phòng',
+					thumbnail: '/assets/images/hai_phong/thumbnail.jpg',
 				},
 				{
-					name: 'Hưng Yên'
+					id: 89,
+					name: 'Hưng Yên',
+					thumbnail: '/assets/images/hung_yen/thumbnail.jpg',
 				},
 				{
-					name: 'Bắc Ninh'
+					id: 99,
+					name: 'Bắc Ninh',
+					thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
 				}
 			]
 		}

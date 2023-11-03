@@ -2,20 +2,34 @@ import {
 	create_element
 } from '../helper.js';
 
-import {
-	data
-} from '../data.js';
+let data = await import('../data.js');
+
+let lang_default = 'VN';
+
+if (localStorage.getItem('lang')) lang_default = localStorage.getItem('lang');
+
+if (lang_default == 'VN') {
+	data = data.VI;
+}
+
+if (lang_default == 'EN') {
+	data = data.EN;
+}
 
 let typing_timer = null;
 
-export async function render() {
+export async function render(params) {
+	data = data.location.filter(location => location.id == params.id)[0];
+	
+	let {name, provinces} = data;
+	
 	const template = create_element('section');
 	template.classList.add('category-page');
 	
 	async function page_header() {
 		const div = create_element('header');
 		div.innerHTML = `
-		<h1 class="text-center">Đồng bằng <br> sông Hồng</h1>
+		<h1 class="text-center">${name}</h1>
 		`;
 		
 		return div;
@@ -83,7 +97,7 @@ export async function render() {
 	template.appendChild(await page_header());
 	template.appendChild(await search_form());
 	template.appendChild(await list());
-	await render_list(data);
+	await render_list(provinces);
 	
 	return template;
 }

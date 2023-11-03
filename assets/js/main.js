@@ -40,7 +40,7 @@ const app = {
 			url: '/category/id=',
 			async render() {
 				const id = pathname.split('/')[2].replace('id=', '');
-				await render.detail({id: id});
+				await render.category({id: id});
 			}
 		}
 	],
