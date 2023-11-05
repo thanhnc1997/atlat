@@ -9,7 +9,7 @@ let lang_default = 'VN';
 if (localStorage.getItem('lang')) lang_default = localStorage.getItem('lang');
 
 if (lang_default == 'VN') {
-	data = data.VI;
+	data = data.VN;
 }
 
 if (lang_default == 'EN') {

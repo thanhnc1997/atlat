@@ -9,7 +9,7 @@ let lang_default = 'VN';
 if (localStorage.getItem('lang')) lang_default = localStorage.getItem('lang');
 
 if (lang_default == 'VN') {
-	data = data.VI;
+	data = data.VN;
 }
 
 if (lang_default == 'EN') {
@@ -49,7 +49,7 @@ export async function render(params) {
 		div.innerHTML = `
 		<div class="search-box">
 			<img class="mr-8" src="/assets/images/icons/search.svg">
-			<input class="input" name="search" placeholder="Tìm kiếm tỉnh, thành phố">
+			<input class="input" name="search" placeholder="${lang_default == 'VI' ? 'Tìm kiếm tỉnh, thành phố' : 'Search city'}">
 		</div>
 		`;
 		
