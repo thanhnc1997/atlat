@@ -37,7 +37,8 @@ export async function render(params) {
 	
 	async function done_typing(params) {
 		const filter_data = provinces.filter(item => {
-			return item.name.toLocaleLowerCase().includes(params.value);
+			let str = item.name.toLocaleLowerCase();
+			return str.includes(params.value);
 		});
 		
 		await render_list(filter_data);
