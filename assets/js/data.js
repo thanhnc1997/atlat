@@ -23,6 +23,36 @@ export const VN = {
 					id: 99,
 					name: 'Bắc Ninh',
 					thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+				},
+				{
+					id: 90,
+					name: 'Hà Nam',
+					thumbnail: '/assets/images/ha_nam/thumbnail.jpg',
+				},
+				{
+					id: 18,
+					name: 'Nam Định',
+					thumbnail: '/assets/images/nam_dinh/thumbnail.jpg',
+				},
+				{
+					id: 17,
+					name: 'Thái Bình',
+					thumbnail: '/assets/images/thai_binh/thumbnail.jpg',
+				},
+				{
+					id: 35,
+					name: 'Ninh Bình',
+					thumbnail: '/assets/images/ninh_binh/thumbnail.png',
+				},
+				{
+					id: 34,
+					name: 'Hải Dương',
+					thumbnail: '/assets/images/hai_duong/thumbnail.jpg',
+				},
+				{
+					id: 88,
+					name: 'Vĩnh Phúc',
+					thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
 				}
 			]
 		}
@@ -46,11 +76,6 @@ export const VN = {
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/pho_bo.jpg',
 						name: 'Phở bò',
-						desc: 'Phở là một món ăn truyền thống của Việt Nam có xuất xứ từ Vân Cù, Nam Định. Phở được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.<br><br>Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta (bò nội, bò vàng).'
-					},
-					{
-						thumbnail: '/assets/images/ha_noi/cuisines/pho_ga.jpg',
-						name: 'Phở gà',
 						desc: 'Phở là một món ăn truyền thống của Việt Nam có xuất xứ từ Vân Cù, Nam Định. Phở được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.<br><br>Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta (bò nội, bò vàng).'
 					},
 					{
@@ -95,12 +120,90 @@ export const VN = {
 				disticts: 0,
 				towns: 8,
 			},
-			desc: 'Bắc Ninh là một tỉnh ở Việt Nam. Đây là tỉnh có diện tích nhỏ nhất cả nước, với vị trí nằm trong Vùng thủ đô Hà Nội, vùng kinh tế trọng điểm Bắc Bộ, thuộc vùng Đồng bằng sông Hồng',
+			desc: 'Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam',
 		},
 		{
 			id: 99,
 			name: 'Bắc Ninh',
 			sub: 'Cái nôi của Dân ca Quan họ',
+			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			administrative: {
+				population: '2.069.110',
+				area: '1.561,8',
+				disticts: 0,
+				towns: 4,
+			},
+			desc: 'Bắc Ninh là một tỉnh ở Việt Nam. Đây là tỉnh có diện tích nhỏ nhất cả nước, với vị trí nằm trong Vùng thủ đô Hà Nội, vùng kinh tế trọng điểm Bắc Bộ, thuộc vùng Đồng bằng sông Hồng',
+		},
+		{
+			id: 90,
+			name: 'Hà Nam',
+			sub: '',
+			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			administrative: {
+				population: '2.069.110',
+				area: '1.561,8',
+				disticts: 0,
+				towns: 4,
+			},
+			desc: 'Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam',
+		},
+		{
+			id: 18,
+			name: 'Nam Định',
+			sub: '',
+			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			administrative: {
+				population: '2.069.110',
+				area: '1.561,8',
+				disticts: 0,
+				towns: 4,
+			},
+			desc: 'Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam',
+		},
+		{
+			id: 17,
+			name: 'Thái Bình',
+			sub: '',
+			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			administrative: {
+				population: '2.069.110',
+				area: '1.561,8',
+				disticts: 0,
+				towns: 4,
+			},
+			desc: 'Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam',
+		},
+		{
+			id: 35,
+			name: 'Nình Bình',
+			sub: '',
+			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			administrative: {
+				population: '2.069.110',
+				area: '1.561,8',
+				disticts: 0,
+				towns: 4,
+			},
+			desc: 'Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam',
+		},
+		{
+			id: 34,
+			name: 'Hải Dương',
+			sub: '',
+			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			administrative: {
+				population: '2.069.110',
+				area: '1.561,8',
+				disticts: 0,
+				towns: 4,
+			},
+			desc: 'Hưng Yên là một tỉnh nằm ở trung tâm đồng bằng sông Hồng, Việt Nam',
+		},
+		{
+			id: 88,
+			name: 'Vĩnh Phúc',
+			sub: '',
 			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
 			administrative: {
 				population: '2.069.110',
@@ -154,18 +257,13 @@ export const EN = {
 				disticts: 12,
 				towns: 17,
 			},
-			desc: 'Hà Nội là thủ đô, thành phố trực thuộc trung ương và là một trong hai đô thị loại đặc biệt của nước Cộng hòa xã hội chủ nghĩa Việt Nam. Đây là thành phố lớn thứ hai, có vị trí là trung tâm chính trị, văn hóa, giáo dục, một trong hai trung tâm kinh tế quan trọng tại Việt Nam. Hà Nội nằm về phía tây bắc của trung tâm vùng đồng bằng châu thổ sông Hồng',
+			desc: 'Hanoi is the capital, centrally run city and one of two special urban areas of the Socialist Republic of Vietnam. This is the second largest city, located as a political, cultural, educational center, and one of two important economic centers in Vietnam. Hanoi is located northwest of the center of the Red River Delta',
 			cuisine: {
-				desc: 'Hà Nội là thành phố nổi tiếng với nền ẩm thực truyền thống và đa dạng',
+				desc: 'Hanoi is a city famous for its traditional and diverse cuisine',
 				list: [
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/pho_bo.jpg',
 						name: 'Phở bò',
-						desc: 'Phở là một món ăn truyền thống của Việt Nam có xuất xứ từ Vân Cù, Nam Định. Phở được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.<br><br>Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta (bò nội, bò vàng).'
-					},
-					{
-						thumbnail: '/assets/images/ha_noi/cuisines/pho_ga.jpg',
-						name: 'Phở gà',
 						desc: 'Phở là một món ăn truyền thống của Việt Nam có xuất xứ từ Vân Cù, Nam Định. Phở được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.<br><br>Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta (bò nội, bò vàng).'
 					},
 					{

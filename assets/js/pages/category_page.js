@@ -36,7 +36,7 @@ export async function render(params) {
 	}
 	
 	async function done_typing(params) {
-		const filter_data = data.filter(item => {
+		const filter_data = provinces.filter(item => {
 			return item.name.toLocaleLowerCase().includes(params.value);
 		});
 		
@@ -49,7 +49,7 @@ export async function render(params) {
 		div.innerHTML = `
 		<div class="search-box">
 			<img class="mr-8" src="/assets/images/icons/search.svg">
-			<input class="input" name="search" placeholder="${lang_default == 'VI' ? 'Tìm kiếm tỉnh, thành phố' : 'Search city'}">
+			<input class="input" name="search" placeholder="${lang_default == 'VN' ? 'Tìm kiếm tỉnh, thành phố' : 'Search city'}">
 		</div>
 		`;
 		
