@@ -138,8 +138,8 @@ export const VN = {
 		{
 			id: 90,
 			name: 'Hà Nam',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Quê hương trống đồng Ngọc Lũ',
+			thumbnail: '/assets/images/ha_nam/thumbnail.jpg',
 			administrative: {
 				population: '867.258',
 				area: '860,9',
@@ -151,8 +151,8 @@ export const VN = {
 		{
 			id: 18,
 			name: 'Nam Định',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Xứ sở của những thánh đường',
+			thumbnail: '/assets/images/nam_dinh/thumbnail.jpg',
 			administrative: {
 				population: '1.771.000',
 				area: '1.668',
@@ -164,8 +164,8 @@ export const VN = {
 		{
 			id: 17,
 			name: 'Thái Bình',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Quê lúa',
+			thumbnail: '/assets/images/thai_binh/thumbnail.jpg',
 			administrative: {
 				population: '1.876.579',
 				area: '1.570,5',
@@ -177,8 +177,8 @@ export const VN = {
 		{
 			id: 35,
 			name: 'Nình Bình',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Vùng đất Cố đô Hoa Lư',
+			thumbnail: '/assets/images/ninh_binh/thumbnail.jpg',
 			administrative: {
 				population: '1.000.093',
 				area: '1.387',
@@ -190,8 +190,8 @@ export const VN = {
 		{
 			id: 34,
 			name: 'Hải Dương',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Thủ phủ bánh đậu xanh',
+			thumbnail: '/assets/images/hai_duong/thumbnail.jpg',
 			administrative: {
 				population: '1.932.090',
 				area: '1.668,2',
@@ -203,8 +203,8 @@ export const VN = {
 		{
 			id: 88,
 			name: 'Vĩnh Phúc',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Tam Đảo mù sương',
+			thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
 			administrative: {
 				population: '1.184.074',
 				area: '1.235,2',
@@ -326,8 +326,8 @@ export const EN = {
 		{
 			id: 90,
 			name: 'Hà Nam',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Quê hương trống đồng Ngọc Lũ',
+			thumbnail: '/assets/images/ha_nam/thumbnail.jpg',
 			administrative: {
 				population: '867.258',
 				area: '860,9',
@@ -339,8 +339,8 @@ export const EN = {
 		{
 			id: 18,
 			name: 'Nam Định',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Xứ sở của những thánh đường',
+			thumbnail: '/assets/images/nam_dinh/thumbnail.jpg',
 			administrative: {
 				population: '1.771.000',
 				area: '1.668',
@@ -352,8 +352,8 @@ export const EN = {
 		{
 			id: 17,
 			name: 'Thái Bình',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Quê lúa',
+			thumbnail: '/assets/images/thai_binh/thumbnail.jpg',
 			administrative: {
 				population: '1.876.579',
 				area: '1.570,5',
@@ -365,8 +365,8 @@ export const EN = {
 		{
 			id: 35,
 			name: 'Nình Bình',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Vùng đất Cố đô Hoa Lư',
+			thumbnail: '/assets/images/ninh_binh/thumbnail.jpg',
 			administrative: {
 				population: '1.000.093',
 				area: '1.387',
@@ -378,8 +378,8 @@ export const EN = {
 		{
 			id: 34,
 			name: 'Hải Dương',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Thủ phủ bánh đậu xanh',
+			thumbnail: '/assets/images/hai_duong/thumbnail.jpg',
 			administrative: {
 				population: '1.932.090',
 				area: '1.668,2',
@@ -391,8 +391,8 @@ export const EN = {
 		{
 			id: 88,
 			name: 'Vĩnh Phúc',
-			sub: '',
-			thumbnail: '/assets/images/bac_ninh/thumbnail.jpg',
+			sub: 'Tam Đảo mù sương',
+			thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
 			administrative: {
 				population: '1.184.074',
 				area: '1.235,2',
