@@ -32,7 +32,7 @@ export async function render(params) {
 					<span onclick="history.back()" class="round-icon">
 						<img src="/assets/images/icons/arrow_left.svg">
 					</span>
-					<h3 style="color: #fff;">Chi tiết</h3>
+					<h3 style="color: #fff;">${lang_default == 'VN' ? 'Chi tiết' : 'Detail'}</h3>
 					<span class="round-icon">
 						<img src="/assets/images/icons/copy.svg">
 					</span>
@@ -62,7 +62,7 @@ export async function render(params) {
 					<img src="/assets/images/icons/user_group.svg">
 				</span>
 				<p>
-					<small class="d-block mb-6">Dân số</small>
+					<small class="d-block mb-6">${lang_default == 'VN' ? 'Dân số' : 'Population'}</small>
 					<b style="font-size: 16px;">${administrative.population}</b>
 				</p>
 			</div>
@@ -71,7 +71,7 @@ export async function render(params) {
 					<img src="/assets/images/icons/area.svg">
 				</span>
 				<p>
-					<small class="d-block mb-6">Diện tích</small>
+					<small class="d-block mb-6">${lang_default == 'VN' ? 'Diện tích' : 'Area'}</small>
 					<b style="font-size: 16px;">${administrative.area}</b>
 				</p>
 			</div>
@@ -80,7 +80,7 @@ export async function render(params) {
 					<img src="/assets/images/icons/map.svg">
 				</span>
 				<p>
-					<small class="d-block mb-6">Quận</small>
+					<small class="d-block mb-6">${lang_default == 'VN' ? 'Quận' : 'Districts'}</small>
 					<b style="font-size: 16px;">${administrative.disticts}</b>
 				</p>
 			</div>
@@ -89,19 +89,19 @@ export async function render(params) {
 					<img src="/assets/images/icons/map.svg">
 				</span>
 				<p>
-					<small class="d-block mb-6">Huyện</small>
+					<small class="d-block mb-6">${lang_default == 'VN' ? 'Huyện' : 'Towns'}</small>
 					<b style="font-size: 16px;">${administrative.towns}</b>
 				</p>
 			</div>
 		</div>
 		
-		<h4 class="mb-12">Giới thiệu</h4>
+		<h4 class="mb-12">${lang_default == 'VN' ? 'Giới thiệu' : 'Overview'}</h4>
 		<p class="mb-18 text-justify">${desc || ''}</p>
 		
 		${
 		cuisine
 		? `
-		<h4 class="mb-12">Ẩm thực</h4>
+		<h4 class="mb-12">${lang_default == 'VN' ? 'Ẩm thực' : 'Culinary'}</h4>
 		<p class="mb-18 text-justify">${cuisine.desc}</p>
 		<div class="overflow-hidden">
 			<div class="gallery-list" id="cuisine">
@@ -131,10 +131,8 @@ export async function render(params) {
 			div.addEventListener('click', async () => {
 				document.body.appendChild(await pop_up({
 					html: `
-					<figure class="mb-18 pop-up-img" style="background-image: url(${cuisine.thumbnail});">
-						<figcaption><h3>${cuisine.name}</h3></figcaption>
-					</figure>
-					<p class="text-justify" style="padding: 0 14px;">${cuisine.desc}</p>
+					<figure class="mb-18 pop-up-img" style="background-image: url(${cuisine.thumbnail});"></figure>
+					<h3>${cuisine.name}</h3>
 					`
 				}));
 			});
@@ -156,7 +154,7 @@ export async function render(params) {
 					${params.html}
 				</div>
 				<div class="modal-footer text-right">
-					<button class="btn btn-light">Đóng</button>
+					<button class="btn btn-light">${lang_default == 'VN' ? 'Đóng' : 'Close'}</button>
 				</div>
 			</div>
 		</div>

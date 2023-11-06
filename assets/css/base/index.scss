@@ -438,6 +438,7 @@ hr {
 
 .round-icon {
 	background: $light;
+	border: 1px solid $grey4;
 	width: 38px;
 	height: 38px;
 	border-radius: 50%;
@@ -548,7 +549,8 @@ hr {
 
 .pop-up-img {
 	position: relative;
-	padding-top: calc(9 / 16 * 100%); 
+	// padding-top: calc(9 / 16 * 100%);
+	padding-top: calc(4 / 5 * 100%);
 	border-radius: 8px; 
 	background: #E1E1E1 no-repeat center;
 	background-size: cover;

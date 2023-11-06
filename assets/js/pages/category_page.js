@@ -29,6 +29,12 @@ export async function render(params) {
 	async function page_header() {
 		const div = create_element('header');
 		div.innerHTML = `
+		<header class="d-flex align-items-center justify-content-between" style="padding: 36px 16px 0;">
+			<span onclick="history.back()" class="round-icon">
+				<img src="/assets/images/icons/arrow_left.svg">
+			</span>
+		</header>
+
 		<h1 class="text-center">${name}</h1>
 		`;
 		
