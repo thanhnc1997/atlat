@@ -18,7 +18,7 @@ if (lang_default == 'EN') {
 
 export async function render(params) {
 	data = data.province.filter(province => province.id == params.id)[0];
-	let {name, desc, sub, thumbnail, cuisine, administrative} = data;
+	let {name, desc, sub, thumbnail, cuisine, administrative, places} = data;
 	
 	const template = create_element('section');
 	template.classList.add('detail-page');
@@ -95,16 +95,32 @@ export async function render(params) {
 			</div>
 		</div>
 		
-		<h4 class="mb-12">${lang_default == 'VN' ? 'Giới thiệu' : 'Overview'}</h4>
-		<p class="mb-18 text-justify">${desc || ''}</p>
+		<h4 class="mb-8">${lang_default == 'VN' ? 'Giới thiệu' : 'Overview'}</h4>
+		<p class="mb-24 text-justify">${desc || ''}</p>
 		
 		${
 		cuisine
 		? `
-		<h4 class="mb-12">${lang_default == 'VN' ? 'Ẩm thực' : 'Culinary'}</h4>
+		<h4 class="mb-8">${lang_default == 'VN' ? 'Ẩm thực' : 'Culinary'}</h4>
 		<p class="mb-18 text-justify">${cuisine.desc}</p>
-		<div class="overflow-hidden">
+		<div class="overflow-hidden mb-24">
 			<div class="gallery-list" id="cuisine">
+				<div class="track">
+					
+				</div>
+			</div>
+		</div>
+		`
+		: ''
+		}
+		
+		${
+		places
+		? `
+		<h4 class="mb-8">${lang_default == 'VN' ? 'Danh lam thắng cảnh' : 'Places'}</h4>
+		<p class="mb-18 text-justify">${places.desc}</p>
+		<div class="overflow-hidden">
+			<div class="gallery-list" id="places">
 				<div class="track">
 					
 				</div>
@@ -138,6 +154,28 @@ export async function render(params) {
 			});
 			
 			template.querySelector('#cuisine .track').appendChild(div);
+		});
+	}
+	
+	async function places_list() {
+		if (!places) return false;
+		places.list.map(place => {
+			const div = create_element('div');
+			div.classList.add('item');
+			div.innerHTML = `
+			<figure style="background-image: url(${place.thumbnail})"></figure>
+			`;
+			
+			div.addEventListener('click', async () => {
+				document.body.appendChild(await pop_up({
+					html: `
+					<figure class="mb-18 pop-up-img" style="background-image: url(${place.thumbnail});"></figure>
+					<h3>${place.name}</h3>
+					`
+				}));
+			});
+			
+			template.querySelector('#places .track').appendChild(div);
 		});
 	}
 	
@@ -176,6 +214,7 @@ export async function render(params) {
 	template.appendChild(await page_header());
 	template.appendChild(await page_body());
 	await cuisine_list();
+	await places_list();
 	
 	return template;
 }

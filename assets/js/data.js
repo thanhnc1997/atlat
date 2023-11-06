@@ -52,7 +52,7 @@ export const VN = {
 				{
 					id: 88,
 					name: 'Vĩnh Phúc',
-					thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
+					thumbnail: '/assets/images/vinh_phuc/thumbnail.png',
 				}
 			]
 		}
@@ -94,6 +94,27 @@ export const VN = {
 						desc: 'Bún đậu mắm tôm là món ăn đơn giản, dân dã trong ẩm thực miền Bắc Việt Nam. Đây là món thường được dùng như bữa ăn nhẹ, ăn chơi. <br><br>Thành phần chính gồm có bún tươi, đậu hũ chiên vàng, chả cốm, nem chua, mắm tôm pha chanh, ớt và ăn kèm với các loại rau thơm như tía tô, kinh giới, rau húng, xà lách, cà pháo... Cũng như các món ăn dân gian khác, giá thành rẻ nên được nhiều người giới bình dân ăn nên thu nhập của những người buôn bán những món ăn này khá cao.'
 					}
 				]
+			},
+			places: {
+				desc: 'Là trung tâm văn hoá và chính trị của cả nước, Hà Nội có vô vàn danh lam thắng cảnh đẹp với những nét đặc sắc riêng thu hút du khách đến thăm quan.',
+				list: [
+					{
+						thumbnail: '/assets/images/ha_noi/places/ho_hoan_kiem.jpg',
+						name: 'Hồ Hoàn Kiếm',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/places/lang_bac.jpg',
+						name: 'Lăng Chủ tịch Hồ Chí Minh',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/places/hoang_thanh_thang_long.jpg',
+						name: 'Hoàng thành Thăng Long',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/places/nha_hat_lon.jpg',
+						name: 'Nhà Hát Lớn',
+					},
+				]
 			}
 		},
 		{
@@ -132,6 +153,27 @@ export const VN = {
 						name: 'Bánh mì cay'
 					},
 				]
+			},
+			places: {
+				desc: 'Với vị trí địa lý đặc biệt tạo ra nhiều cảnh đẹp, điểm đến lý tưởng và hấp dẫn, Hải Phòng luôn là địa điểm du lịch nổi tiếng thu hút du khách trong và ngoài nước.',
+				list: [
+					{
+						thumbnail: '/assets/images/hai_phong/places/tuyet_tinh_coc.jpg',
+						name: 'Tuyệt Tình Cốc',
+					},
+					{
+						thumbnail: '/assets/images/hai_phong/places/cat_ba.jpg',
+						name: 'Cát Bà',
+					},
+					{
+						thumbnail: '/assets/images/hai_phong/places/nui_voi.jpg',
+						name: 'Núi Voi',
+					},
+					{
+						thumbnail: '/assets/images/hai_phong/places/do_son.jpg',
+						name: 'Đồ Sơn',
+					},
+				]
 			}
 		},
 		{
@@ -162,6 +204,19 @@ export const VN = {
 						name: 'Ếch om Phượng Tường'
 					},
 				]
+			},
+			places: {
+				desc: 'Hưng yên sở hữu được số lượng công trình kiến trúc tôn giáo, tín ngưỡng cùng những phong tục truyền thống độc đáo.',
+				list: [
+					{
+						thumbnail: '/assets/images/hung_yen/places/van_mieu_xich_dang.jpg',
+						name: 'Văn miếu Xích Đằng',
+					},
+					{
+						thumbnail: '/assets/images/hung_yen/places/den_la_tien.jpg',
+						name: 'Di tích Cây đa và Đền La Tiến',
+					},
+				]
 			}
 		},
 		{
@@ -190,6 +245,23 @@ export const VN = {
 					{
 						thumbnail: '/assets/images/bac_ninh/cuisines/nem_lang_bui.jpg',
 						name: 'Nem Bùi'
+					},
+				]
+			},
+			places: {
+				desc: 'Bắc Ninh tuy diện tích nhỏ nhất nhưng có rất nhiều danh lam thắng cảnh nổi tiếng tầm cỡ quốc gia.',
+				list: [
+					{
+						thumbnail: '/assets/images/bac_ninh/places/lang_dinh_bang.png',
+						name: 'Đình làng Đình Bảng',
+					},
+					{
+						thumbnail: '/assets/images/bac_ninh/places/chua_but_thap.png',
+						name: 'Chùa Bút Tháp',
+					},
+					{
+						thumbnail: '/assets/images/bac_ninh/places/lang_tranh_dong_ho.png',
+						name: 'Làng tranh Đông Hồ',
 					},
 				]
 			}
@@ -226,6 +298,27 @@ export const VN = {
 						name: 'Thịt dê núi'
 					},
 				]
+			},
+			places: {
+				desc: 'Hà Nam từ lâu đã được mệnh danh là mảnh đất anh hùng với những địa điểm du lịch Hà Nam tâm linh, di tích lịch sử, làng nghề nổi tiếng. ',
+				list: [
+					{
+						thumbnail: '/assets/images/ha_nam/places/ao_dong.jpg',
+						name: 'Ao Dong',
+					},
+					{
+						thumbnail: '/assets/images/ha_nam/places/bat_canh_son.jpg',
+						name: 'Bát Cảnh Sơn',
+					},
+					{
+						thumbnail: '/assets/images/ha_nam/places/nui_ngoc.jpg',
+						name: 'Núi Ngọc',
+					},
+					{
+						thumbnail: '/assets/images/ha_nam/places/hang_luon.jpg',
+						name: 'Hang Luồn',
+					},
+				]
 			}
 		},
 		{
@@ -258,6 +351,23 @@ export const VN = {
 					{
 						thumbnail: '/assets/images/nam_dinh/cuisines/banh_xiu_pao.jpg',
 						name: 'Bánh xíu páo'
+					},
+				]
+			},
+			places: {
+				desc: 'Nam Định không chỉ sở hữu những món ăn ngon mà còn có rất nhiều địa điểm đẹp không phải ai cũng biết đến.',
+				list: [
+					{
+						thumbnail: '/assets/images/nam_dinh/places/den_thanh_hung_nghia.jpg',
+						name: 'Đền thánh Hưng Nghĩa',
+					},
+					{
+						thumbnail: '/assets/images/nam_dinh/places/nha_tho_do_hai_ly.png',
+						name: 'Nhà thờ đổ Hải Lý',
+					},
+					{
+						thumbnail: '/assets/images/nam_dinh/places/den_thanh_kien_lao.jpg',
+						name: 'Đền thánh Kiên Lao',
 					},
 				]
 			}
@@ -294,6 +404,19 @@ export const VN = {
 						name: 'Nem chạo Vi Thủy'
 					},
 				]
+			},
+			places: {
+				desc: 'Thái Bình là một trong những vùng đất sở hữu nhiều điểm du lịch hấp dẫn mà nhất định bạn phải thử ghé thăm một lần.  ',
+				list: [
+					{
+						thumbnail: '/assets/images/thai_binh/places/bien_vo_cuc.jpg',
+						name: 'Biển vô cực',
+					},
+					{
+						thumbnail: '/assets/images/thai_binh/places/chua_keo.jpg',
+						name: 'Chùa Keo',
+					},
+				]
 			}
 		},
 		{
@@ -328,6 +451,27 @@ export const VN = {
 						name: 'Thịt dê núi'
 					},
 				]
+			},
+			places: {
+				desc: 'Được mệnh danh là vùng đất Cố Đô hiện nay du lịch Ninh Bình trở thành điểm đến nổi tiếng của Việt Nam.  ',
+				list: [
+					{
+						thumbnail: '/assets/images/ninh_binh/places/tam_coc.jpg',
+						name: 'Tam Cốc',
+					},
+					{
+						thumbnail: '/assets/images/ninh_binh/places/bich_dong.jpg',
+						name: 'Bích Động',
+					},
+					{
+						thumbnail: '/assets/images/ninh_binh/places/hoa_lu.jpg',
+						name: 'Cố Đô Hoa Lư',
+					},
+					{
+						thumbnail: '/assets/images/ninh_binh/places/dong_thien_ha.jpg',
+						name: 'Động Thiên Hà',
+					},
+				]
 			}
 		},
 		{
@@ -358,13 +502,26 @@ export const VN = {
 						name: 'Bánh dày Gia Lộc'
 					},
 				]
+			},
+			places: {
+				desc: 'Hải Dương là vùng đất địa linh nhân kiệt, là trung tâm văn hóa và danh lam thắng cảnh với nhiều di tích lịch sử ở Việt Nam còn được gìn giữ. ',
+				list: [
+					{
+						thumbnail: '/assets/images/hai_duong/places/con_son.png',
+						name: 'Côn Sơn Kiếp Bạc',
+					},
+					{
+						thumbnail: '/assets/images/hai_duong/places/dao_co.jpg',
+						name: 'Đảo cò Chi Lăng',
+					},
+				]
 			}
 		},
 		{
 			id: 88,
 			name: 'Vĩnh Phúc',
 			sub: 'Tam Đảo mù sương',
-			thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
+			thumbnail: '/assets/images/vinh_phuc/thumbnail.png',
 			administrative: {
 				population: '1.184.074',
 				area: '1.235,2',
@@ -394,6 +551,23 @@ export const VN = {
 					{
 						thumbnail: '/assets/images/vinh_phuc/cuisines/ca_thinh_lap_thach.jpeg',
 						name: 'Cá thính Lập Thạch'
+					},
+				]
+			},
+			places: {
+				desc: 'Vĩnh Phúc có khung cảnh thiên nhiên nhiên tuyệt đẹp, những địa danh du lịch mang một vẻ đẹp xanh của mây trời, kỳ vĩ và hoang vu rừng núi, lành lạnh sương khói, dịu dàng sông nước mênh mông. ',
+				list: [
+					{
+						thumbnail: '/assets/images/vinh_phuc/places/tam_dao.jpg',
+						name: 'Tam Đảo',
+					},
+					{
+						thumbnail: '/assets/images/vinh_phuc/places/thien_vien_truc_lam.png',
+						name: 'Thiền viện Trúc Lâm Tây Thiên',
+					},
+					{
+						thumbnail: '/assets/images/vinh_phuc/places/dam_vac.jpg',
+						name: 'Đầm Vạc',
 					},
 				]
 			}
@@ -455,7 +629,7 @@ export const EN = {
 				{
 					id: 88,
 					name: 'Vinh Phuc',
-					thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
+					thumbnail: '/assets/images/vinh_phuc/thumbnail.png',
 				}
 			]
 		}
@@ -497,6 +671,27 @@ export const EN = {
 						desc: 'Bún đậu mắm tôm là món ăn đơn giản, dân dã trong ẩm thực miền Bắc Việt Nam. Đây là món thường được dùng như bữa ăn nhẹ, ăn chơi. <br><br>Thành phần chính gồm có bún tươi, đậu hũ chiên vàng, chả cốm, nem chua, mắm tôm pha chanh, ớt và ăn kèm với các loại rau thơm như tía tô, kinh giới, rau húng, xà lách, cà pháo... Cũng như các món ăn dân gian khác, giá thành rẻ nên được nhiều người giới bình dân ăn nên thu nhập của những người buôn bán những món ăn này khá cao.'
 					}
 				]
+			},
+			places: {
+				desc: 'As the cultural and political center of the country, Hanoi has countless beautiful landscapes with unique characteristics that attract tourists to visit.',
+				list: [
+					{
+						thumbnail: '/assets/images/ha_noi/places/ho_hoan_kiem.jpg',
+						name: 'Hồ Hoàn Kiếm',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/places/lang_bac.jpg',
+						name: 'Lăng Chủ tịch Hồ Chí Minh',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/places/hoang_thanh_thang_long.jpg',
+						name: 'Hoàng thành Thăng Long',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/places/nha_hat_lon.jpg',
+						name: 'Nhà Hát Lớn',
+					},
+				]
 			}
 		},
 		{
@@ -535,6 +730,27 @@ export const EN = {
 						name: 'Bánh mì cay'
 					},
 				]
+			},
+			places: {
+				desc: 'Hai Phong is one of five centrally run cities in Vietnam. This is an important port city, industrial center, seaport, and also an economic, cultural, medical, educational, scientific, commercial and technological center in the Northern Coastal Region of Vietnam. Male.',
+				list: [
+					{
+						thumbnail: '/assets/images/hai_phong/places/tuyet_tinh_coc.jpg',
+						name: 'Tuyệt Tình Cốc',
+					},
+					{
+						thumbnail: '/assets/images/hai_phong/places/cat_ba.jpg',
+						name: 'Cát Bà',
+					},
+					{
+						thumbnail: '/assets/images/hai_phong/places/nui_voi.jpg',
+						name: 'Núi Voi',
+					},
+					{
+						thumbnail: '/assets/images/hai_phong/places/do_son.jpg',
+						name: 'Đồ Sơn',
+					},
+				]
 			}
 		},
 		{
@@ -565,6 +781,19 @@ export const EN = {
 						name: 'Ếch om Phượng Tường'
 					},
 				]
+			},
+			places: {
+				desc: 'Hung Yen possesses a number of religious and belief architectural works and unique traditional customs.',
+				list: [
+					{
+						thumbnail: '/assets/images/hung_yen/places/van_mieu_xich_dang.jpg',
+						name: 'Văn miếu Xích Đằng',
+					},
+					{
+						thumbnail: '/assets/images/hung_yen/places/den_la_tien.jpg',
+						name: 'Di tích Cây đa và Đền La Tiến',
+					},
+				]
 			}
 		},
 		{
@@ -593,6 +822,23 @@ export const EN = {
 					{
 						thumbnail: '/assets/images/bac_ninh/cuisines/nem_lang_bui.jpg',
 						name: 'Nem Bùi'
+					},
+				]
+			},
+			places: {
+				desc: 'Although Bac Ninh has the smallest area, it has many famous national landscapes.',
+				list: [
+					{
+						thumbnail: '/assets/images/bac_ninh/places/lang_dinh_bang.png',
+						name: 'Đình làng Đình Bảng',
+					},
+					{
+						thumbnail: '/assets/images/bac_ninh/places/chua_but_thap.png',
+						name: 'Chùa Bút Tháp',
+					},
+					{
+						thumbnail: '/assets/images/bac_ninh/places/lang_tranh_dong_ho.png',
+						name: 'Làng tranh Đông Hồ',
 					},
 				]
 			}
@@ -629,6 +875,28 @@ export const EN = {
 						name: 'Thịt dê núi'
 					},
 				]
+			},
+			
+			places: {
+				desc: 'Ha Nam has long been known as a heroic land with spiritual Ha Nam tourist destinations, historical relics, and famous craft villages. ',
+				list: [
+					{
+						thumbnail: '/assets/images/ha_nam/places/ao_dong.jpg',
+						name: 'Ao Dong',
+					},
+					{
+						thumbnail: '/assets/images/ha_nam/places/bat_canh_son.jpg',
+						name: 'Bát Cảnh Sơn',
+					},
+					{
+						thumbnail: '/assets/images/ha_nam/places/nui_ngoc.jpg',
+						name: 'Núi Ngọc',
+					},
+					{
+						thumbnail: '/assets/images/ha_nam/places/hang_luon.jpg',
+						name: 'Hang Luồn',
+					},
+				]
 			}
 		},
 		{
@@ -661,6 +929,24 @@ export const EN = {
 					{
 						thumbnail: '/assets/images/nam_dinh/cuisines/banh_xiu_pao.jpg',
 						name: 'Bánh xíu páo'
+					},
+				]
+			},
+			
+			places: {
+				desc: 'Nam Dinh not only possesses delicious food but also many beautiful places that not everyone knows about.',
+				list: [
+					{
+						thumbnail: '/assets/images/nam_dinh/places/den_thanh_hung_nghia.jpg',
+						name: 'Đền thánh Hưng Nghĩa',
+					},
+					{
+						thumbnail: '/assets/images/nam_dinh/places/nha_tho_do_hai_ly.png',
+						name: 'Nhà thờ đổ Hải Lý',
+					},
+					{
+						thumbnail: '/assets/images/nam_dinh/places/den_thanh_kien_lao.jpg',
+						name: 'Đền thánh Kiên Lao',
 					},
 				]
 			}
@@ -697,6 +983,20 @@ export const EN = {
 						name: 'Nem chạo Vi Thủy'
 					},
 				]
+			},
+			
+			places: {
+				desc: 'Thai Binh is one of the lands with many attractive tourist attractions that you must definitely try to visit once.  ',
+				list: [
+					{
+						thumbnail: '/assets/images/thai_binh/places/bien_vo_cuc.jpg',
+						name: 'Biển vô cực',
+					},
+					{
+						thumbnail: '/assets/images/thai_binh/places/chua_keo.jpg',
+						name: 'Chùa Keo',
+					},
+				]
 			}
 		},
 		{
@@ -731,6 +1031,27 @@ export const EN = {
 						name: 'Thịt dê núi'
 					},
 				]
+			},
+			places: {
+				desc: 'Known as the land of the Ancient Capital, Ninh Binh tourism has now become a famous destination in Vietnam.  ',
+				list: [
+					{
+						thumbnail: '/assets/images/ninh_binh/places/tam_coc.jpg',
+						name: 'Tam Cốc',
+					},
+					{
+						thumbnail: '/assets/images/ninh_binh/places/bich_dong.jpg',
+						name: 'Bích Động',
+					},
+					{
+						thumbnail: '/assets/images/ninh_binh/places/hoa_lu.jpg',
+						name: 'Cố Đô Hoa Lư',
+					},
+					{
+						thumbnail: '/assets/images/ninh_binh/places/dong_thien_ha.jpg',
+						name: 'Động Thiên Hà',
+					},
+				]
 			}
 		},
 		{
@@ -761,13 +1082,26 @@ export const EN = {
 						name: 'Bánh dày Gia Lộc'
 					},
 				]
+			},
+			places: {
+				desc: 'Hai Duong is a spiritual land of outstanding people, a cultural and scenic center with many historical relics in Vietnam still preserved. ',
+				list: [
+					{
+						thumbnail: '/assets/images/hai_duong/places/con_son.png',
+						name: 'Côn Sơn Kiếp Bạc',
+					},
+					{
+						thumbnail: '/assets/images/hai_duong/places/dao_co.jpg',
+						name: 'Đảo cò Chi Lăng',
+					},
+				]
 			}
 		},
 		{
 			id: 88,
 			name: 'Vinh Phuc',
 			sub: 'Tam Dao - The foggy heaven',
-			thumbnail: '/assets/images/vinh_phuc/thumbnail.jpg',
+			thumbnail: '/assets/images/vinh_phuc/thumbnail.png',
 			administrative: {
 				population: '1.184.074',
 				area: '1.235,2',
@@ -797,6 +1131,23 @@ export const EN = {
 					{
 						thumbnail: '/assets/images/vinh_phuc/cuisines/ca_thinh_lap_thach.jpeg',
 						name: 'Cá thính Lập Thạch'
+					},
+				]
+			},
+			places: {
+				desc: 'Vinh Phuc has beautiful natural scenery, tourist attractions with the green beauty of clouds and sky, majestic and desolate mountains and forests, cool and foggy weather, and gentle vast rivers and water. ',
+				list: [
+					{
+						thumbnail: '/assets/images/vinh_phuc/places/tam_dao.jpg',
+						name: 'Tam Đảo',
+					},
+					{
+						thumbnail: '/assets/images/vinh_phuc/places/thien_vien_truc_lam.png',
+						name: 'Thiền viện Trúc Lâm Tây Thiên',
+					},
+					{
+						thumbnail: '/assets/images/vinh_phuc/places/dam_vac.jpg',
+						name: 'Đầm Vạc',
 					},
 				]
 			}
