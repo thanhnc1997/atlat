@@ -300,7 +300,7 @@ export const VN = {
 			id: 35,
 			name: 'Nình Bình',
 			sub: 'Vùng đất Cố đô Hoa Lư',
-			thumbnail: '/assets/images/ninh_binh/thumbnail.jpg',
+			thumbnail: '/assets/images/ninh_binh/thumbnail.png',
 			administrative: {
 				population: '1.000.093',
 				area: '1.387',
@@ -703,7 +703,7 @@ export const EN = {
 			id: 35,
 			name: 'Ninh Binh',
 			sub: 'Vùng đất Cố đô Hoa Lư',
-			thumbnail: '/assets/images/ninh_binh/thumbnail.jpg',
+			thumbnail: '/assets/images/ninh_binh/thumbnail.png',
 			administrative: {
 				population: '1.000.093',
 				area: '1.387',
