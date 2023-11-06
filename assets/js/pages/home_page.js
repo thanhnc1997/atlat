@@ -20,8 +20,6 @@ if (lang_default == 'EN') {
 	lang_switch = true;
 }
 
-console.log(data);
-
 export async function render(params) {
 	const template = create_element('section');
 	template.classList.add('home-page');
@@ -38,7 +36,7 @@ export async function render(params) {
 		</div>
 		`;
 		
-		div.querySelector('.lang-switcher').addEventListener('click', (e) => {
+		div.querySelector('.lang-switcher').addEventListener('click', async (e) => {
 			e.currentTarget.classList.toggle('trigger');
 			lang_switch = !lang_switch;
 			
@@ -58,37 +56,44 @@ export async function render(params) {
 				localStorage.setItem('lang', 'VN');
 			}
 			
-			location.reload();
+			template.querySelector('.page').innerHTML = await page_content(lang_default);
 		});
 		
 		return div;
 	}
 	
+	async function page_content(lang) {
+		let html = '';
+		
+		if (lang == 'VN') {
+			html = `
+			<h1><b>Đất nước Việt Nam</b></h1>
+			<p>
+				Nằm ở Đông Nam Á, Việt Nam là một đất nước nhỏ bé và xinh đẹp với lịch sử hào hùng, tinh thần yêu nước sâu sắc và phong cảnh tuyệt vời.<br><br>
+				Việt Nam xã hội chủ nghĩa, được biết đến rộng rãi là Việt Nam, không phải là một cái tên xa lạ với toàn thế giới.
+			</p>
+			<a class="btn" href="/category/id=1" style="background: #ACD7FF; color: #00328E; font-size: 16px; padding: 18px; height: auto;"><b>Khám phá</b></a>
+			`;
+		}
+		
+		if (lang == 'EN') {
+			html = `
+			<h1><b>Việt Nam (Vietnam)</b></h1>
+			<p>
+				Located in Southeast Asia, Vietnam is a small and beautiful country with victorious history, profound patriotism and wonderful landscapes.<br><br>
+				The Socialist Republic of Vietnam, widely known as Vietnam, is not a strange name to the whole world.
+			</p>
+			<a class="btn" href="/category/id=1" style="background: #ACD7FF; color: #00328E; font-size: 16px; padding: 18px; height: auto;"><b>Explore now</b></a>
+			`;
+		}
+		
+		return html;
+	}
+	
 	async function page_body() {
 		let div = create_element('div');
 		div.classList.add('page');
-		div.innerHTML = `
-		${
-		lang_default == 'VN'
-		? `
-		<h1><b>Đất nước Việt Nam</b></h1>
-		<p>
-			Nằm ở Đông Nam Á, Việt Nam là một đất nước nhỏ bé và xinh đẹp với lịch sử hào hùng, tinh thần yêu nước sâu sắc và phong cảnh tuyệt vời.<br><br>
-			Việt Nam xã hội chủ nghĩa, được biết đến rộng rãi là Việt Nam, không phải là một cái tên xa lạ với toàn thế giới.
-		</p>
-		<a class="btn" href="/category/id=1" style="background: #ACD7FF; color: #00328E; font-size: 16px; padding: 18px; height: auto;"><b>Khám phá</b></a>
-		`
-		: `
-		<h1><b>Việt Nam (Vietnam)</b></h1>
-		<p>
-			Located in Southeast Asia, Vietnam is a small and beautiful country with victorious history, profound patriotism and wonderful landscapes.<br><br>
-			The Socialist Republic of Vietnam, widely known as Vietnam, is not a strange name to the whole world.
-		</p>
-		<a class="btn" href="/category/id=1" style="background: #ACD7FF; color: #00328E; font-size: 16px; padding: 18px; height: auto;"><b>Explore now</b></a>
-		`
-		}
-		
-		`;
+		div.innerHTML = await page_content(lang_default);
 		
 		return div;
 	}
