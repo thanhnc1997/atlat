@@ -137,19 +137,21 @@ export async function render(params) {
 	
 	async function cuisine_list() {
 		if (!cuisine) return false;
-		cuisine.list.map(cuisine => {
+		cuisine.list.map((dish, index) => {
 			const div = create_element('div');
 			div.classList.add('item');
 			div.innerHTML = `
-			<figure style="background-image: url(${cuisine.thumbnail})"></figure>
+			<figure style="background-image: url(${dish.thumbnail})"></figure>
 			`;
 			
 			div.addEventListener('click', async () => {
 				document.body.appendChild(await pop_up({
 					html: `
-					<figure class="mb-18 pop-up-img" style="background-image: url(${cuisine.thumbnail});"></figure>
-					<h3>${cuisine.name}</h3>
-					`
+					<figure class="mb-18 pop-up-img" style="background-image: url(${dish.thumbnail});"></figure>
+					<h3 style="color: #fff;">${dish.name}</h3>
+					`,
+					gallery: cuisine,
+					pos: index
 				}));
 			});
 			
@@ -159,7 +161,7 @@ export async function render(params) {
 	
 	async function places_list() {
 		if (!places) return false;
-		places.list.map(place => {
+		places.list.map((place, index) => {
 			const div = create_element('div');
 			div.classList.add('item');
 			div.innerHTML = `
@@ -170,8 +172,10 @@ export async function render(params) {
 				document.body.appendChild(await pop_up({
 					html: `
 					<figure class="mb-18 pop-up-img" style="background-image: url(${place.thumbnail});"></figure>
-					<h3>${place.name}</h3>
-					`
+					<h3 style="color: #fff;">${place.name}</h3>
+					`,
+					gallery: places,
+					pos: index
 				}));
 			});
 			
@@ -181,34 +185,67 @@ export async function render(params) {
 	
 	async function pop_up(params) {
 		document.body.classList.add('overflow-hidden');
+		let {html, gallery, pos} = params;
 		
-		const div = create_element('div');
-		div.classList.add('modal');
-		div.innerHTML = `
-		<div class="overlay"></div>
+		const modal = create_element('div');
+		modal.classList.add('modal', 'image-preview');
+		modal.innerHTML = `
+		<div class="overlay dark"></div>
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-body">
-					${params.html}
+				<div class="modal-header text-right" style="border: 0;">
+					<button class="btn"><img src="/assets/images/icons/close.svg"></button>
 				</div>
-				<div class="modal-footer text-right">
-					<button class="btn btn-light">${lang_default == 'VN' ? 'Đóng' : 'Close'}</button>
+				<div class="modal-body">
+					${html}
+				</div>
+				<div class="modal-footer overflow-hidden">
+					<div class="gallery-list">
+						<div class="track">
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		`;
 		
+		async function load_list(params) {
+			params.map((item, index) => {
+				const div = create_element('div');
+				div.classList.add('item');
+				if (index == pos) div.classList.add('active');
+				div.innerHTML = `
+				<figure style="background-image: url(${item.thumbnail})"></figure>
+				`;
+
+				div.addEventListener('click', async e => {
+					if (div.parentElement.querySelector('.active')) {
+						div.parentElement.querySelector('.active').classList.remove('active');
+						e.currentTarget.classList.add('active');
+					}
+					
+					modal.querySelector('.modal-body figure').style.cssText = `background-image: url(${item.thumbnail})`;
+					modal.querySelector('.modal-body h3').innerHTML = item.name;
+				});
+
+				modal.querySelector('.modal-footer .track').appendChild(div);
+			});
+		}
+		
 		async function remove_modal(trigger) {
-			div.querySelector(trigger).addEventListener('click', () => {
+			modal.querySelector(trigger).addEventListener('click', () => {
 				document.querySelector('.modal').remove();
 				document.body.classList.remove('overflow-hidden');
 			});
 		}
 		
-		remove_modal('.overlay');
-		remove_modal('.modal-footer .btn');
+		// remove_modal('.overlay');
+		// remove_modal('.modal-footer .btn');
+		await remove_modal('.modal-header .btn');
+		await load_list(gallery.list);
 		
-		return div;
+		return modal;
 	}
 	
 	template.appendChild(await page_header());
