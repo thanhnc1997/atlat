@@ -538,11 +538,14 @@ hr {
   .modal.image-preview .gallery-list {
     border-top: 1px solid #555;
     padding: 28px 0 18px; }
+    .modal.image-preview .gallery-list .track {
+      display: grid;
+      grid-gap: 6px;
+      grid-template: auto/repeat(6, 1fr); }
     .modal.image-preview .gallery-list .item {
-      max-width: 68px;
-      flex: 0 0 68px;
-      margin-right: 6px;
-      opacity: .25; }
+      opacity: .25;
+      max-width: unset;
+      margin: 0; }
       .modal.image-preview .gallery-list .item.active {
         opacity: 1; }
       .modal.image-preview .gallery-list .item figure {
@@ -555,9 +558,9 @@ hr {
     display: flex;
     align-items: center; }
     .gallery-list .track .item {
-      max-width: 120px;
-      flex: 0 0 120px;
-      margin-right: 12px;
+      max-width: 90px;
+      flex: 0 0 90px;
+      margin-right: 8px;
       cursor: pointer; }
       .gallery-list .track .item:last-child {
         margin-right: 0; }
@@ -569,7 +572,7 @@ hr {
 
 .pop-up-img {
   position: relative;
-  padding-top: calc(4 / 5 * 100%);
+  padding-top: calc(3 / 4 * 100%);
   border-radius: 8px;
   background: #E1E1E1 no-repeat center;
   background-size: cover; }

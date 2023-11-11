@@ -94,6 +94,14 @@ export const VN = {
 						name: 'Bún đậu mắm tôm',
 					},
 					{
+						thumbnail: '/assets/images/ha_noi/cuisines/xoi_xeo.jpg',
+						name: 'Xôi xéo',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/tao_pho.png',
+						name: 'Tào phớ',
+					},
+					{
 						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
 						name: 'Cốm',
 					},
@@ -673,6 +681,18 @@ export const EN = {
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/bun_dau.jpg',
 						name: 'Bún đậu mắm tôm',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/bun_cha.jpg',
+						name: 'Bún chả',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/xoi_xeo.jpg',
+						name: 'Xôi xéo',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/tao_pho.png',
+						name: 'Tào phớ',
 					},
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
