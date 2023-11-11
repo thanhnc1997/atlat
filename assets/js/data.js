@@ -659,17 +659,25 @@ export const EN = {
 						name: 'Phở bò Hà Nội',
 					},
 					{
-						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
-						name: 'Cốm',
-					},
-					{
 						thumbnail: '/assets/images/ha_noi/cuisines/cha_ca_la_vong.jpg',
 						name: 'Chả cá Lã Vọng',
 					},
 					{
+						thumbnail: '/assets/images/ha_noi/cuisines/bun_thang.jpg',
+						name: 'Bún thang',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/bun_rieu_cua.jpg',
+						name: 'Bún riêu cua',
+					},
+					{
 						thumbnail: '/assets/images/ha_noi/cuisines/bun_dau.jpg',
 						name: 'Bún đậu mắm tôm',
-					}
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
+						name: 'Cốm',
+					},
 				]
 			},
 			places: {
