@@ -477,8 +477,9 @@ hr {
 	
 	.modal-dialog {
 		width: 100%;
-		max-height: calc(100% - 32px);
-		max-width: calc(100% - 32px);
+		height: 100%;
+		max-height: calc(100vh - 32px);
+		max-width: 540px;
 		margin: 28px auto;
 		position: relative;
 		z-index: 111;
@@ -523,16 +524,18 @@ hr {
 	}
 	
 	&.image-preview {
-		.modal-dialog {
-			margin: 0;
-			max-width: unset;
-			max-height: unset;
-			height: 100%;
-		}
-		
 		.modal-content {
 			background: transparent;
 			box-shadow: unset;
+		}
+		
+		.modal-header {
+			padding: 0 16px;
+			border: 0;
+			
+			.close {
+				transform: translate(12px);
+			}
 		}
 		
 		.gallery-list {
@@ -540,8 +543,8 @@ hr {
 			padding: 28px 0 18px;
 			
 			.item {
-				max-width: 60px;
-    		flex: 0 0 60px;
+				max-width: 68px;
+    		flex: 0 0 68px;
 				margin-right: 6px;
 				opacity: .25;
 				
@@ -558,7 +561,7 @@ hr {
 }
 
 .gallery-list {
-	overflow: auto;
+	overflow: scroll;
 	
 	.track {
 		white-space: nowrap;

@@ -76,23 +76,27 @@ export const VN = {
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/pho_bo.jpg',
 						name: 'Phở bò Hà Nội',
-						desc: 'Phở là một món ăn truyền thống của Việt Nam có xuất xứ từ Vân Cù, Nam Định. Phở được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.<br><br>Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta (bò nội, bò vàng).'
-					},
-					{
-						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
-						name: 'Cốm',
-						desc: 'Cốm là món ăn được làm từ lúa nếp làm chín bằng cách rang sau đó mang đi giã và được làm sạch bằng cách sàng sảy cho hết vỏ trấu, loại bỏ hết tạp chất, sau đó cũng có loại cốm mang đi hồ cốm bằng nước lá cốm. <br><br>Món ăn này thường được thấy tại nhiều vùng miền trên đất nước Việt Nam và cũng là món ăn rất thịnh hành trong ẩm thực đồng bằng Bắc Bộ, đặc biệt là tại Hà Nội.'
 					},
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/cha_ca_la_vong.jpg',
 						name: 'Chả cá Lã Vọng',
-						desc: 'Chả cá Lã Vọng là tên của món chả cá đặc sản Hà Nội. <br><br>Đây là món chả làm từ cá (thường là cá lăng) thái miếng đem tẩm ướp, nướng trên than củi rồi rán lại trong chảo mỡ, do gia đình họ Đoàn tại số nhà 17 phố Chả Cá (trước đây là phố Hàng Sơn) trong khu phố cổ giữ bí quyết kinh doanh từ năm 1871 và đặt tên cho nó như trên.'
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/bun_thang.jpg',
+						name: 'Bún thang',
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/bun_rieu_cua.jpg',
+						name: 'Bún riêu cua',
 					},
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/bun_dau.jpg',
 						name: 'Bún đậu mắm tôm',
-						desc: 'Bún đậu mắm tôm là món ăn đơn giản, dân dã trong ẩm thực miền Bắc Việt Nam. Đây là món thường được dùng như bữa ăn nhẹ, ăn chơi. <br><br>Thành phần chính gồm có bún tươi, đậu hũ chiên vàng, chả cốm, nem chua, mắm tôm pha chanh, ớt và ăn kèm với các loại rau thơm như tía tô, kinh giới, rau húng, xà lách, cà pháo... Cũng như các món ăn dân gian khác, giá thành rẻ nên được nhiều người giới bình dân ăn nên thu nhập của những người buôn bán những món ăn này khá cao.'
-					}
+					},
+					{
+						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
+						name: 'Cốm',
+					},
 				]
 			},
 			places: {
@@ -653,22 +657,18 @@ export const EN = {
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/pho_bo.jpg',
 						name: 'Phở bò Hà Nội',
-						desc: 'Phở là một món ăn truyền thống của Việt Nam có xuất xứ từ Vân Cù, Nam Định. Phở được xem là một trong những món ăn tiêu biểu cho nền ẩm thực Việt Nam.<br><br>Thịt bò thích hợp nhất để nấu phở là thịt, xương từ các giống bò ta (bò nội, bò vàng).'
 					},
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/com.jpeg',
 						name: 'Cốm',
-						desc: 'Cốm là món ăn được làm từ lúa nếp làm chín bằng cách rang sau đó mang đi giã và được làm sạch bằng cách sàng sảy cho hết vỏ trấu, loại bỏ hết tạp chất, sau đó cũng có loại cốm mang đi hồ cốm bằng nước lá cốm. <br><br>Món ăn này thường được thấy tại nhiều vùng miền trên đất nước Việt Nam và cũng là món ăn rất thịnh hành trong ẩm thực đồng bằng Bắc Bộ, đặc biệt là tại Hà Nội.'
 					},
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/cha_ca_la_vong.jpg',
 						name: 'Chả cá Lã Vọng',
-						desc: 'Chả cá Lã Vọng là tên của món chả cá đặc sản Hà Nội. <br><br>Đây là món chả làm từ cá (thường là cá lăng) thái miếng đem tẩm ướp, nướng trên than củi rồi rán lại trong chảo mỡ, do gia đình họ Đoàn tại số nhà 17 phố Chả Cá (trước đây là phố Hàng Sơn) trong khu phố cổ giữ bí quyết kinh doanh từ năm 1871 và đặt tên cho nó như trên.'
 					},
 					{
 						thumbnail: '/assets/images/ha_noi/cuisines/bun_dau.jpg',
 						name: 'Bún đậu mắm tôm',
-						desc: 'Bún đậu mắm tôm là món ăn đơn giản, dân dã trong ẩm thực miền Bắc Việt Nam. Đây là món thường được dùng như bữa ăn nhẹ, ăn chơi. <br><br>Thành phần chính gồm có bún tươi, đậu hũ chiên vàng, chả cốm, nem chua, mắm tôm pha chanh, ớt và ăn kèm với các loại rau thơm như tía tô, kinh giới, rau húng, xà lách, cà pháo... Cũng như các món ăn dân gian khác, giá thành rẻ nên được nhiều người giới bình dân ăn nên thu nhập của những người buôn bán những món ăn này khá cao.'
 					}
 				]
 			},

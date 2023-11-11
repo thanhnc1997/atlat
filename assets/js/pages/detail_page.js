@@ -193,8 +193,8 @@ export async function render(params) {
 		<div class="overlay dark"></div>
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<div class="modal-header text-right" style="border: 0;">
-					<button class="btn"><img src="/assets/images/icons/close.svg"></button>
+				<div class="modal-header text-right">
+					<button class="btn close"><img src="/assets/images/icons/close.svg"></button>
 				</div>
 				<div class="modal-body">
 					${html}
@@ -231,6 +231,12 @@ export async function render(params) {
 
 				modal.querySelector('.modal-footer .track').appendChild(div);
 			});
+			
+			setTimeout(() => {
+				if (pos >= 4) {
+					modal.querySelector('.modal-footer .gallery-list').scrollLeft = pos * 68 + (pos + 1) * 4;
+				}
+			}, 200);
 		}
 		
 		async function remove_modal(trigger) {
@@ -240,8 +246,6 @@ export async function render(params) {
 			});
 		}
 		
-		// remove_modal('.overlay');
-		// remove_modal('.modal-footer .btn');
 		await remove_modal('.modal-header .btn');
 		await load_list(gallery.list);
 		
